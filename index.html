@@ -1,13 +1,139 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-TW">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>甜點電商</title>
     <link rel="stylesheet" href="all.css" />
+    <!-- fontawesome套件 -->
+    <script
+      src="https://kit.fontawesome.com/3745e1388c.js"
+      crossorigin="anonymous"
+    ></script>
   </head>
   <body>
-    <h1>標題 project2</h1>
+    <div class="container header">
+      <!-- 主logo -->
+      <h1>
+        <a href="#"
+          ><img src="img/logo-all-dark.svg" alt="logo" width="219" height="40"
+        /></a>
+      </h1>
+      <!-- 右側選單 -->
+      <ul class="menu">
+        <li><a href="#">首頁</a></li>
+        <li><a href="#">甜點</a></li>
+        <li><a href="#">登入</a></li>
+        <li>
+          <a href="#">
+            <i class="fas fa-shopping-cart"></i>
+          </a>
+        </li>
+      </ul>
+    </div>
+    <div class="container banner">
+      <img src="img/dessert_banner.jpg" alt="banner" />
+    </div>
+    <!-- 主要內容 -->
+    <div class="container main">
+      <!-- 左側選單 -->
+      <div class="aside">
+        <h2>甜點類別</h2>
+        <ul>
+          <li><a href="#">所有甜點（48）</a></li>
+          <li><a href="#">本日精選（10）</a></li>
+          <li><a href="#">人氣推薦（26）</a></li>
+          <li><a href="#">新品上市（12）</a></li>
+        </ul>
+      </div>
+      <div class="productList">
+        <ul class="productList-card">
+          <li>
+            <div class="tag">本日精選</div>
+            <i class="heart far fa-heart"></i>
+            <img src="img/d1.jpg" alt="p1-img" />
+            <!-- 看到商品品項以及價格是水平並排的 => 獨立出來增設一個區塊display:flex -->
+            <div class="productList-card-body">
+              <h2>焦糖馬卡龍</h2>
+              <span>NT$ 450</span>
+            </div>
+            <a href="#" class="productList-card-cart">加入購物車</a>
+          </li>
+          <li>
+            <div class="tag">本日精選</div>
+            <i class="heart far fa-heart"></i>
+            <img src="img/d2.jpg" alt="p1-img" />
+            <!-- 看到商品品項以及價格是水平並排的 => 獨立出來增設一個區塊display:flex -->
+            <div class="productList-card-body">
+              <h2>焦糖馬卡龍</h2>
+              <span>NT$ 450</span>
+            </div>
+            <a href="#" class="productList-card-cart">加入購物車</a>
+          </li>
+          <li>
+            <div class="tag">本日精選</div>
+            <i class="heart far fa-heart"></i>
+            <img src="img/d3.jpg" alt="p1-img" />
+            <!-- 看到商品品項以及價格是水平並排的 => 獨立出來增設一個區塊display:flex -->
+            <div class="productList-card-body">
+              <h2>焦糖馬卡龍</h2>
+              <span>NT$ 450</span>
+            </div>
+            <a href="#" class="productList-card-cart">加入購物車</a>
+          </li>
+          <li>
+            <div class="tag">本日精選</div>
+            <i class="heart far fa-heart"></i>
+            <img src="img/d4.jpg" alt="p1-img" />
+            <!-- 看到商品品項以及價格是水平並排的 => 獨立出來增設一個區塊display:flex -->
+            <div class="productList-card-body">
+              <h2>焦糖馬卡龍</h2>
+              <span>NT$ 450</span>
+            </div>
+            <a href="#" class="productList-card-cart">加入購物車</a>
+          </li>
+          <li>
+            <div class="tag">本日精選</div>
+            <i class="heart far fa-heart"></i>
+            <img src="img/d5.jpg" alt="p1-img" />
+            <!-- 看到商品品項以及價格是水平並排的 => 獨立出來增設一個區塊display:flex -->
+            <div class="productList-card-body">
+              <h2>焦糖馬卡龍</h2>
+              <span>NT$ 450</span>
+            </div>
+            <a href="#" class="productList-card-cart">加入購物車</a>
+          </li>
+          <li>
+            <div class="tag">本日精選</div>
+            <i class="heart far fa-heart"></i>
+            <img src="img/d6.jpg" alt="p1-img" />
+            <!-- 看到商品品項以及價格是水平並排的 => 獨立出來增設一個區塊display:flex -->
+            <div class="productList-card-body">
+              <h2>焦糖馬卡龍</h2>
+              <span>NT$ 450</span>
+            </div>
+            <a href="#" class="productList-card-cart">加入購物車</a>
+          </li>
+        </ul>
+        <div class="pagination">
+          <ul class="pagination-list">
+            <li>
+              <a href="#">
+                <i class="fas fa-angle-left"></i>
+              </a>
+            </li>
+            <li><a href="#">1</a></li>
+            <li><a href="#">2</a></li>
+            <li><a href="#">3</a></li>
+            <li>
+              <a href="#">
+                <i class="fas fa-angle-right"></i>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
   </body>
 </html>

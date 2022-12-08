@@ -1,5 +1,301 @@
-h1 {
-  color: red;
-  font-size: 50px;
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* 以上為css reset */
+
+/* 先把比較常見的設定寫完 */
+/* 設計稿字體的主要顏色=>html */
+html {
+  color: #3f5d45;
+}
+/* <a>連結的顏色獨立出來設定 */
+a {
+  color: #3f5d45;
+  text-decoration: none;
+}
+/* 字體 */
+body {
+  font-family: PingFang TC;
+}
+/* 先針對容器的寬度去做設定&置中排列 */
+.container {
+  width: 940px;
+  margin: 0 auto;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  /* 主logo距離上下都是30 */
+  padding-top: 30px;
+  padding-bottom: 30px;
+  /* 右側選單部分因為距離上下較大，還需要另外垂直置中 */
+  align-items: center;
+}
+/* 讓右側選單可以水平排列 */
+.menu {
+  display: flex;
+}
+/* 讓選單可以有hover效果 */
+.menu a {
+  display: block;
+  padding: 10px 30px 8px 30px;
+}
+.menu a:hover {
+  background-color: #3f5d45;
+  color: #fff;
+}
+.banner {
+  margin-bottom: 60px;
+}
+.banner img {
+  width: 100%;
+  height: 496px;
+  object-fit: cover;
+}
+
+.main {
+  display: flex;
+  justify-content: space-between;
+}
+
+.aside {
+  width: 300px;
+}
+.aside h2 {
+  background-color: #3f5d45;
+  font-size: 24px;
+  line-height: 65px;
+  color: #eaf0ed;
+  text-align: center;
+}
+/* border的上面1px加上下面1px就變吃2px */
+.aside li {
+  margin-bottom: -1px;
+}
+.aside li a {
+  display: block;
+  line-height: 65px;
+  text-align: center;
+  font-size: 24px;
+  border: 1px solid #eaf0ed;
+}
+
+.aside li a:hover {
+  background-color: #eaf0ed;
+}
+
+.productList {
+  width: 620px;
+}
+
+.productList-card {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.productList-card li {
+  width: 300px;
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.productList-card .tag {
+  position: absolute;
+  background-color: #3f5d45;
+  color: #eaf0ed;
+  padding: 10px;
+  left: 20px;
+  top: 0px;
+  letter-spacing: 5px;
+  writing-mode: vertical-lr;
+}
+.productList-card .heart {
+  position: absolute;
+  top: 19px;
+  right: 22px;
+  font-size: 20px;
+}
+
+.productList-card img {
+  width: 100%;
+  height: 315px;
+  object-fit: cover;
+}
+
+.productList-card .productList-card-body {
+  display: flex;
+  border-bottom: 1px solid #eaf0ed;
+  border-left: 1px solid #eaf0ed;
+  border-right: 1px solid #eaf0ed;
+  line-height: 65px;
+  font-size: 20px;
+}
+
+.productList-card .productList-card-body h2 {
+  width: 173px;
+  text-align: center;
+  border-right: 1px solid #eaf0ed;
+}
+
+.productList-card .productList-card-body span {
+  width: 127px;
+  text-align: center;
+}
+.productList-card .productList-card-cart {
+  line-height: 65px;
+  background-color: #eaf0ed;
+  font-size: 24px;
+  text-align: center;
+  display: block;
   font-weight: bold;
+}
+
+.pagination {
+  display: flex;
+  justify-content: end;
+}
+
+.pagination .pagination-list {
+  display: flex;
+}
+
+.pagination-list li a {
+  display: block;
+  line-height: 60px;
+  width: 60px;
+  font-size: 20px;
+  text-align: center;
+  border: 1px solid #eaf0ed;
+}
+.pagination-list li a:hover {
+  background-color: #3f5d45;
+  color: #eaf0ed;
 }
